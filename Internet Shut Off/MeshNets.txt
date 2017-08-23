@@ -1,0 +1,27 @@
+MeshNet: How To Instantly Create Your Own Internet
+
+I first came across the concept of MeshNets when we were scrambling in Anonymous Operation Egypt to turn the Internet back on for the protesters in Tahir Square in 2011. But by far it's most amazing and gigantic adoption was during the so-called "Umbrella Revolution" in Hong Kong, where a universally deployed MeshNet app called OpenGarden (no longer available) kept the Internet turned on for tens of thousands of protesters despite the best efforts of the Chinese government to cut off their connectivity.
+
+At it's most basic, MeshNet software simply creates a Virtual Private Network - not much different than your common VPN or The Onion Router. However, a MeshNet is not a part of the Dark Web. Quite the opposite, a MeshNet is meant to be as open, peer-to-peer, and as public facing as possible. It is "private" only in the sense that you must be running a common MeshNet software and protocol. That software is what technically the term "MeshNet" refers to. I curently recommend the Open Project Meshnet software called CJDNS, which has become the gold standard of open source MeshNet software and protocol.
+
+http://www.santacruzmesh.net/installer.html
+
+https://github.com/hyperboria/android
+
+http://www.santacruzmesh.net/connect.html
+
+https://github.com/hyperboria/cjdns#how-to-install-cjdns
+
+While MeshNet's are not exclusively for when dictators turn off the Internet, the scenario does give a great example of exactly how powerful a MeshNet can be. So let's say you have several tens of thousands of people semi-permanently camped out in a tense and hostile communications environment. Think Tahir Square for instance. Bang, the Internet goes off. But Anonymous has encouraged most people to download and install CJDNS on their decices and laptops. Here's what that software does. First, using any method available to the device, from bluetooth to infrared, it begins forming VPN type node connections with all the devices around it. So, within minutes you may not yet have outside Internet, but Tahir Square is big and you can now use messaging to communicate through the MeshNet formed by your devices running CJDNS, from one end of Tahir Square kilometers to the other side. You will all be able to connect to each other and communicate, and if you pass around copies of the app - connect others.
+
+While that doesn't solve your outside network connectivity, it is a huge start. But CJDNS seamlessly manages that aspect as well. CJDNS will share with the entire MeshNet any amount of outside network connectivity that comes to it on the device it's running on. So, even though you may have several thousand connected to a MeshNet, attach one satellite phone or even a dial up modem to one laptop, Mobile Device, or wireless router, and that outside connection becomes available to everyone else on the MeshNet. Add more sat phones, dial up modems, or some other internet technology and with each new outside connection the MeshNet's bandwidth for everyone increases.
+
+Which brings us to the most popular current common use for MeshNets: the Open Node movement. Basically think communism of bandwidth. Open Noders believe everyone should open their routers and make Internet free everywhere. To that end, and especially on college campuses where this movement is centered, a single decent internet pipe will be shared via massive and sometimes campus wide MeshNets. Again, CJDNS being one of the most popular. Try it and see, do a little war driving with a CJDNS node running and see if you don't find folks already using it to share community bandwidth. If you're ever in an area with lots of routers but none open, pop open CJDNS - you'll be often surprised to find this hidden gem of a network running a quiet, but open Internet....just out of sight. 
+
+
+
+
+600 words
+
+
+

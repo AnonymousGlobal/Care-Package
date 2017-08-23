@@ -1,0 +1,19 @@
+Wizards Of The Arab Spring: How Anonymous Brought Internet Back To Egypt
+
+By Commander X
+
+So the question that has been put to me, "legend says Anonymous turned the Internet back on in Egypt - if that's true, how in the world did they manage that?". First to answer I must explain, as I was there - we actually turned the Internet back on a total of three times, with varying degrees of success each time. In the case of the first two Internet cut offs, they were done at the ISP level. However, partly with the collusion of White Hats working in Egypt for those very ISPs - we controlled all the National switch routers. We simply "threw a switch" and the net came back on like a light bulb.
+
+That enraged Mubarak to such a degree that he did something none of us could forsee. He sent an Army demolition team down to where the only fiber optic cable in Egypt came up out of the Mediteranian Sea - and dynamited the line. He literally pulled the plug out of the wall like a spoiled child. It is at that point that Anonymous truly did earn it's legend boots, because something like that is pretty drastic. But within 12 hours we cobbled together a patchwork of over-lapping solutions that returned full Internet, first to the all important Tahir Square occupation, then within 24 hours to many parts of downtown Cairo. Within a week even far flung outposts were able to at least send and recieve basic text messages.
+
+Here's how we did it. As a back bone we had the Egyptians deploy a MeshNet. You can read my previous article on MeshNets here. (Link Here) But the MeshNet is essential in order to set up an Internet backbone that is non-hierarchical and peer-to-peer instead. This allows every device that connects to this micro-internet to share all the load of the entire network. A MeshNet also instantly distributes any little channels of outside bandwidth you can get connected to it, and does it seamlessly and automatically.
+
+So the next obvious step having esptablished the urgent need for the Egyptian people to deploy our MeshNet software on every laptop and device, we needed bandwidth to the outside world. At first, journalists took turns volunteering satellite phones with data channels. They could be plugged into any laptop with the MeshNet software, and that bandwidth belonged to everyone on the MeshNet. We then got some donations and had some more satellite phones, and inexpensive handheld directional antennas - delivered by UPS to NGO's in Cairo who hand-delivered them to Tahir Square. 
+
+We also discovered to our amazement that Mubarak had NOT cut the "coppers", or the old-school telephone lines. It was a simple matter to teach people how to make adjustments to their home wifi routers, and the MeshNet software - and begin to spread the connectivity across the metropolitian Cairo area. To this end we sought the donation of, and eventually managed - over 500 dial-up data lines. Plus we had to write up basic instructions on how to even use old-school dial-up!  Crude but effective.
+
+Finally we had one of the first really solid opportunities to test an obscure hack, that you can Google up - on how to send data packets via Ham Radio. While this method was only used briefly at a few far flung outposts of protest in Egypt, and then only for a few days at most - it is a method that is practical and possible. I've seen it done with my own eyes. We came up with all of this in a few hours, put all the instructions into a single PDF - and blasted it any way possible into the country. The Egyptians did the rest themselves, so I guess you could say that final time we didn't turn on their Internet, we simply told them how to do it themselves!
+
+
+
+630 words

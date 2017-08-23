@@ -1,0 +1,328 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang4105{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 6.2.9200}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Using Google Public DNS\par
+\par
+Change your DNS to 8.8.8.8 and 8.8.4.4 (Google's)\par
+\par
+\par
+\par
+Configuring your network settings to use Google Public DNS\par
+Testing your new settings\par
+Diagnosing resolution problems\par
+Switching back to your old DNS settings\par
+Configuring your network settings to use Google Public DNS\par
+\par
+When you use Google Public DNS, you are changing your DNS "switchboard" operator from your ISP to Google Public DNS.\par
+\par
+In most cases, the IP addresses used by your ISP's domain name servers are automatically set by your ISP via the Dynamic Host Configuration Protocol (DHCP). To use Google Public DNS, you need to explicitly change the DNS settings in your operating system or device to use the Google Public DNS IP addresses. The procedure for changing your DNS settings varies according to operating system and version (Windows, Mac or Linux) or the device (computer, phone, or router). We give general procedures here that might not apply for your OS or device; please consult your vendor documentation for authoritative information.\par
+\par
+Note: We recommend that only users who are proficient with configuring operating system settings make these changes.\par
+\par
+Important: Before you start\par
+\par
+Before you change your DNS settings to use Google Public DNS, be sure to write down the current server addresses or settings on a piece of paper. It is very important that you keep these numbers for backup purposes, in case you need to revert to them at any time.\par
+\par
+We also recommend that you print this page, in the event that you encounter a problem and need to refer to these instructions.\par
+\par
+Google Public DNS IP addresses\par
+\par
+The Google Public DNS IP addresses (IPv4) are as follows:\par
+\par
+8.8.8.8\par
+8.8.4.4\par
+The Google Public DNS IPv6 addresses are as follows:\par
+\par
+2001:4860:4860::8888\par
+2001:4860:4860::8844\par
+You can use either number as your primary or secondary DNS server. You can specify both numbers, but do not specify one number as both primary and secondary.\par
+\par
+You can configure Google Public DNS addresses for either IPv4 or IPv6 connections, or both.\par
+\par
+Changing your DNS servers settings\par
+\par
+Because the instructions differ between different versions/releases of each operating system, we only give one version as an example. If you need specific instructions for your operating system/version, please consult your vendor's documentation. You may also find answers on our user group.\par
+\par
+Many systems allow you to specify multiple DNS servers, to be contacted in a priority order. In the following instructions, we provide steps to specify only the Google Public DNS servers as the primary and secondary servers, to ensure that your setup will correctly use Google Public DNS in all cases.\par
+\par
+Note: Depending on your network setup, you may need administrator/root privileges to change these settings.\par
+\par
+Microsoft Windows\par
+\par
+DNS settings are specified in the TCP/IP Properties window for the selected network connection. \par
+\par
+Example: Changing DNS server settings on Microsoft Windows 7\par
+\par
+Go the Control Panel.\par
+Click Network and Internet, then Network and Sharing Center, and click Change adapter settings.\par
+Select the connection for which you want to configure Google Public DNS. For example:\par
+To change the settings for an Ethernet connection, right-click Local Area Connection, and click Properties.\par
+To change the settings for a wireless connection, right-click Wireless Network Connection, and click Properties.\par
+If you are prompted for an administrator password or confirmation, type the password or provide confirmation.\par
+Select the Networking tab. Under This connection uses the following items, select Internet Protocol Version 4 (TCP/IPv4) or Internet Protocol Version 6 (TCP/IPv6) and then click Properties.\par
+Click Advanced and select the DNS tab. If there are any DNS server IP addresses listed there, write them down for future reference, and remove them from this window.\par
+Click OK.\par
+Select Use the following DNS server addresses. If there are any IP addresses listed in the Preferred DNS server or Alternate DNS server, write them down for future reference.\par
+Replace those addresses with the IP addresses of the Google DNS servers:\par
+For IPv4: 8.8.8.8 and/or 8.8.4.4.\par
+For IPv6: 2001:4860:4860::8888 and/or 2001:4860:4860::8844\par
+Restart the connection you selected in step 3.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Repeat the procedure for additional network connections you want to change.\par
+Mac OS X\par
+\par
+DNS settings are specified in the Network window. \par
+\par
+Example: Changing DNS server settings on Mac OS 10.5\par
+\par
+From the Apple menu, click System Preferences, then click Network. \par
+If the lock icon in the lower left-hand corner of the window is locked, click the icon to make changes, and when prompted to authenticate, enter your password.\par
+Select the connection for which you want to configure Google Public DNS. For example:\par
+To change the settings for an Ethernet connection, select Built-In Ethernet, and click Advanced.\par
+To change the settings for a wireless connection, select Airport, and click Advanced.\par
+Select the DNS tab.\par
+Click + to replace any listed addresses with, or add, the Google IP addresses at the top of the list:\par
+For IPv4: 8.8.8.8 and/or 8.8.4.4.\par
+For IPv6: 2001:4860:4860::8888 and/or 2001:4860:4860::8844\par
+Click Apply and OK.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Repeat the procedure for additional network connections you want to change.\par
+Linux\par
+\par
+In most modern Linux distributions, DNS settings are configured through Network Manager.\par
+\par
+Example: Changing DNS server settings on Ubuntu\par
+\par
+In the System menu, click Preferences, then click Network Connections.\par
+Select the connection for which you want to configure Google Public DNS. For example:\par
+To change the settings for an Ethernet connection, select the Wired tab, then select your network interface in the list. It is usually called eth0.\par
+To change the settings for a wireless connection, select the Wireless tab, then select the appropriate wireless network.\par
+Click Edit, and in the window that appears, select the IPv4 Settings or IPv6 Settings tab.\par
+If the selected method is Automatic (DHCP), open the dropdown and select Automatic (DHCP) addresses only instead. If the method is set to something else, do not change it.\par
+In the DNS servers field, enter the Google Public DNS IP addresses, separated by a space:\par
+For IPv4: 8.8.8.8 and/or 8.8.4.4.\par
+For IPv6: 2001:4860:4860::8888 and/or 2001:4860:4860::8844\par
+Click Apply to save the change. If you are prompted for a password or confirmation, type the password or provide confirmation.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Repeat the procedure for additional network connections you want to change.\par
+If your distribution doesn't use Network Manager, your DNS settings are specified in /etc/resolv.conf.\par
+\par
+Example: Changing DNS server settings on a Debian server\par
+\par
+Edit /etc/resolv.conf:\par
+sudo vi /etc/resolv.conf\par
+If any nameserver lines appear, write down the IP addresses for future reference.\par
+Replace the nameserver lines with, or add, the following lines:\par
+For IPv4:\par
+\par
+nameserver 8.8.8.8\par
+nameserver 8.8.4.4\par
+For IPv6:\par
+\par
+nameserver 2001:4860:4860::8888\par
+nameserver 2001:4860:4860::8844\par
+Save and exit.\par
+Restart any Internet clients you are using.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Additionally, if you are using DHCP client software that overwrites the settings in /etc/resolv.conf, you will need to set up the client accordingly by editing the client's configuration file.\par
+\par
+Example: Configuring DHCP client sofware on a Debian server\par
+\par
+Back up /etc/resolv.conf:\par
+sudo cp /etc/resolv.conf /etc/resolv.conf.auto\par
+Edit /etc/dhcp3/dhclient.conf:\par
+sudo vi /etc/dhcp3/dhclient.conf\par
+If there is a line containing domain-name-servers, write down the IP addresses for future reference.\par
+Replace that line with, or add, the following line:\par
+For IPv4:\par
+\par
+prepend domain-name-servers 8.8.8.8, 8.8.4.4;\par
+For IPv6:\par
+\par
+prepend domain-name-servers 2001:4860:4860::8888, 2001:4860:4860::8844;\par
+Save and exit.\par
+Restart any Internet clients you are using.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Routers\par
+\par
+Every router uses a different user interface for configuring DNS server settings; we provide only a generic procedure below. For more information, please consult your router documentation.\par
+\par
+Note: Some ISPs hard-code their DNS servers into the equipment they provide; if you are using such a device, you will not be able to configure it to use Google Public DNS. Instead, you can configure each of the computers connected to the router, as described above.\par
+\par
+To change your settings on a router:\par
+\par
+In your browser, enter the IP address to access the router's administration console. \par
+When prompted, enter the password to access network settings.\par
+Find the screen in which DNS server settings are specified. \par
+If there are IP addresses specified in the fields for the primary and seconday DNS servers, write them down for future reference.\par
+Replace those addresses with the Google IP addresses:\par
+For IPv4: 8.8.8.8 and/or 8.8.4.4.\par
+For IPv6: 2001:4860:4860::8888 and/or 2001:4860:4860::8844\par
+Save and exit.\par
+Restart your browser.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Mobile or other devices\par
+\par
+DNS servers are typically specified under advanced wi-fi settings. However, as every mobile device uses a different user interface for configuring DNS server settings, we provide only a generic procedure below. For more information, please consult your mobile provider's documentation.\par
+\par
+To change your settings on a mobile device:\par
+\par
+Go to the screen in which wi-fi settings are specified.\par
+Find the screen in which DNS server settings are specified.\par
+If there are IP addresses specified in the fields for the primary and seconday DNS servers, write them down for future reference.\par
+Replace those addresses with the Google IP addresses:\par
+For IPv4: 8.8.8.8 and/or 8.8.4.4.\par
+For IPv6: 2001:4860:4860::8888 and/or 2001:4860:4860::8844\par
+Save and exit.\par
+Test that your setup is working correctly; see Testing your new settings below.\par
+Testing your new settings\par
+\par
+To test that the Google DNS resolver is working:\par
+\par
+From your browser, type in a hostname (such as {{\field{\*\fldinst{HYPERLINK http://www.google.com/ }}{\fldrslt{http://www.google.com/\ul0\cf0}}}}\f0\fs22 ). If it resolves correctly, bookmark the page, and try accessing the page from the bookmark. If both of these tests work, everything is working correctly. If not, go to step 2.\par
+From your browser, type in a fixed IP address. You can use {{\field{\*\fldinst{HYPERLINK http://18.62.0.96/ }}{\fldrslt{http://18.62.0.96/\ul0\cf0}}}}\f0\fs22  (which points to the website {{\field{\*\fldinst{HYPERLINK http://www.eecs.mit.edu/ }}{\fldrslt{http://www.eecs.mit.edu/\ul0\cf0}}}}\f0\fs22 ) as the URL.* If this works correctly, bookmark the page, and try accessing the page from the bookmark. If these tests work (but step 1 fails), then there is a problem with your DNS configuration; check the steps above to make sure you have configured everything correctly. If these tests do not work, go to step 3.\par
+Roll back the DNS changes you made and run the tests again. If the tests still do not work, then there is a problem with your network settings; contact your ISP or network administrator for assistance.\par
+* Google thanks MIT for granting permission to use this URL for the purposes of testing web connectivity.\par
+\par
+Diagnosing resolution problems\par
+\par
+If you are encountering problems when resolving particular names, and want to verify whether the problem is with Google Public DNS, please try running the following diagnostic procedures. If you want to report a problem to the Google Public DNS user group, please copy and paste the results of the commands in your email. This information is vital to help us to identify the cause of the problem.\par
+\par
+Step 1: Check to see if the authoritative nameservers are correct\par
+\par
+If Google Public DNS (or any open resolver) has trouble resolving a site, or returns inconsistent answers, sometimes it is because the authoritative nameservers are having trouble. There are various tools and sites to help you check this.\par
+\par
+Some users (and Google Public DNS engineers) have found intoDNS very helpful. For example, if you have trouble visiting {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 , visit intodns.com and enter example.com (the domain for {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 ), or visit {{\field{\*\fldinst{HYPERLINK http://intodns.com/example.com }}{\fldrslt{http://intodns.com/example.com\ul0\cf0}}}}\f0\fs22  directly.\par
+\par
+Additionally, DNSViz is useful for diagnosing DNSSEC related issues. For example, visit dnsviz.net and enter example.com (the domain for {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 ), or visit {{\field{\*\fldinst{HYPERLINK http://dnsviz.net/d/example.com/dnssec/ }}{\fldrslt{http://dnsviz.net/d/example.com/dnssec/\ul0\cf0}}}}\f0\fs22  directly.\par
+\par
+If these tools identify a nameserver configuration issue, please contact the owner of the nameserver to fix it.\par
+\par
+If none of these tools finds any issue with the nameserver, continue to step 2.\par
+\par
+Step 2: Verify that your client can communicate with the Google Public DNS servers\par
+\par
+IPv4\par
+\par
+Open a command prompt, and run the following command:\par
+\par
+On Windows\par
+\par
+tracert -d 8.8.8.8\par
+On Mac OS X\par
+\par
+/usr/sbin/traceroute -n -w 2 -q 2 -m 30 8.8.8.8\par
+On Linux\par
+\par
+sudo traceroute -n -w 2 -q 2 -m 30 8.8.8.8\par
+If the last line of the output does not list 8.8.8.8 as the final hop, or if there are significant timeouts, there may be a network problem preventing you from contacting our servers. Please include the output of the command in any communication with the Google Public DNS team.\par
+\par
+If the last line of the output does list 8.8.8.8 as the final hop, continue to step 3.\par
+\par
+IPv6\par
+\par
+Open a command prompt, and run the following command:\par
+\par
+On Windows\par
+\par
+tracert -d 2001:4860:4860::8888\par
+On Mac OS X\par
+\par
+/usr/sbin/traceroute6 -n -w 2 -q 2 -m 30 2001:4860:4860::8888\par
+On Linux\par
+\par
+sudo traceroute -n -w 2 -q 2 -m 30 2001:4860:4860::8888\par
+If the last line of the output does not list 2001:4860:4860::8888 as the final hop, or if there are significant timeouts, there may be a network problem preventing you from contacting our servers. Try configuring Google Public DNS for IPv4 to diagnose whether the problem is due to IPv6 connectivity on your network. If IPv4 works for you, you may want to revert your IPv6 configuration and use Google Public DNS with IPv4 exclusively. Otherwise, please include the output of the command in any communication with the Google Public DNS team.\par
+\par
+If the last line of the output does list 2001:4860:4860::8888 as the final hop, continue to step 3.\par
+\par
+Step 3: Verify that Google Public DNS can resolve the selected hostname\par
+\par
+In the following steps, replace {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . with the name that you had difficulty resolving. (Put a period at the end of the name to avoid problems with domain suffixes and search lists.)\par
+\par
+IPv4\par
+\par
+At the command prompt, run the following command:\par
+\par
+On Windows\par
+\par
+nslookup -debug {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 8.8.8.8\par
+On Mac and Linux\par
+\par
+dig @8.8.8.8 {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 .\par
+If the output shows an answer section with an A record for the hostname, then Google Public DNS is able to resolve the name. Check your settings to make sure your system is correctly configured to use Google Public DNS. If you are still unable to solve the problem, please include the output of the command in any communication with the Google Public DNS team.\par
+\par
+If the output does not show an answer for the hostname, continue to step 4.\par
+\par
+IPv6\par
+\par
+At the command prompt, run the following command:*\par
+\par
+On Windows\par
+\par
+nslookup -debug -type=AAAA {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 2001:4860:4860::8888\par
+On Mac and Linux\par
+\par
+dig @2001:4860:4860::8888 {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . AAAA\par
+If the output shows an answer section with an AAAA record for the hostname, then Google Public DNS is able to resolve the name. Check your settings to make sure your system is correctly configured to use Google Public DNS. If you are still unable to solve the problem, please include the output of the command in any communication with the Google Public DNS team.\par
+\par
+If the output shows an answer section with an A (IPv4) record for the hostname, then Google Public DNS is able to resolve the name, but the host and/or its nameserver are not configured to return IPv6 results. If you want to verify that you are correctly receiving AAAA records, you can use the hostname ipv6.google.com as a generic test.\par
+\par
+If the output for ipv6.google.com, or another host for which you are certain IPv6 records exist, does not show an answer, continue to step 4.\par
+\par
+* Note: Google properties will not return AAAA records for all users. Please see the Google over IPv6 page for more information about whether your system qualifies.\par
+\par
+Step 4: Verify that Google Public DNS can resolve the selected hostname without performing DNSSEC validation\par
+\par
+Google Public DNS performs DNSSEC validation for all DNS queries by default. When a nameserver fails DNSSEC validation, Google Public DNS returns SERVFAIL. To verify whether Google Public DNS can resolve the hostname without performing DNSSEC validation, run the following command:\par
+\par
+On Windows\par
+\par
+Unfortunately, nslookup does not support DNSSEC and cannot help diagnosis here. Continue to step 5.\par
+On Mac and Linux\par
+\par
+IPv4\par
+\par
+dig @8.8.8.8 {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . +cd\par
+IPv6\par
+\par
+dig @2001:4860:4860::8888 {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . AAAA +cd\par
+If you cannot get a successful result without DNSSEC validation either, continue to step 5.\par
+\par
+If you get a successful result, this usually indicates a DNSSEC misconfiguration at the nameserver. Please make sure that you have followed through step 1. If none of the tools finds any issue with the nameserver, continue to step 5.\par
+\par
+Step 5: Verify that another open resolver can resolve the selected hostname\par
+\par
+At the command prompt, run one of the following commands:\par
+\par
+On Windows\par
+\par
+nslookup {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 4.2.2.1\par
+nslookup {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 4.2.2.2\par
+nslookup {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 208.67.222.222\par
+nslookup {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . 208.67.220.220\par
+On Mac and Linux\par
+\par
+dig {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . @4.2.2.1\par
+dig {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . @4.2.2.2\par
+dig {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . @208.67.222.222\par
+dig {{\field{\*\fldinst{HYPERLINK www.example.com }}{\fldrslt{www.example.com\ul0\cf0}}}}\f0\fs22 . @208.67.220.220\par
+(The first two commands test Level 3's DNS servers. The last two commands test OpenDNS's DNS servers.)\par
+\par
+If you are unable to get a successful result, this means that there is most likely a problem with the server you are trying to contact. Wait some time and try running the tests again. This may be a temporary problem on the server's side that will likely resolve itself eventually. If it does not, you should contact the owner of the server.\par
+\par
+If you are able to get a successful result, there may be a problem with Google Public DNS. Please follow the directions here to report an issue to the Google Public DNS team, and include the output of the commands you ran in the report.\par
+\par
+Switching back to your old DNS settings\par
+\par
+If you had not previously configured any customized DNS servers, to switch back to your old settings, in the window in which you specified the Google IP addresses, select the option to enable obtaining DNS server addresses automatically, and/or delete the Google IP addresses. This will revert your settings to using your ISP's default servers.\par
+\par
+If you need to manually specify any addresses, use the procedures above to specify the old IP addresses.\par
+\par
+If necessary, restart your system.\par
+\par
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 3.0 License, and code samples are licensed under the Apache 2.0 License. For details, see our Site Policies.\par
+\par
+Last updated May 20, 2014.\par
+}
+ 
