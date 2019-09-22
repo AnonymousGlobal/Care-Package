@@ -1,3 +1,14 @@
+MeshNet Apps For Use When Internet Or Mobile Connectivity Is Disrupted
+
+Bridgefy - https://apps.apple.com/us/app/bridgefy/id975776347
+
+https://play.google.com/store/apps/details?id=me.bridgefy.main
+
+
+FireChat - https://www.opengarden.com/firechat/
+
+----------------------------------------------------------------
+
 MeshNet: How To Instantly Create Your Own Internet
 
 I first came across the concept of MeshNets when we were scrambling in Anonymous Operation Egypt to turn the Internet back on for the protesters in Tahir Square in 2011. But by far it's most amazing and gigantic adoption was during the so-called "Umbrella Revolution" in Hong Kong, where a universally deployed MeshNet app called OpenGarden (no longer available) kept the Internet turned on for tens of thousands of protesters despite the best efforts of the Chinese government to cut off their connectivity.
